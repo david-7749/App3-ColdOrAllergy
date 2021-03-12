@@ -44,7 +44,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-
         }
 
         function coldAdd(){
@@ -99,8 +98,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         	<p>Are Your Eyes Watery/Itchy?</p>
-		<a href="#two" class="w3-btn w3-blue"> YES </a>
-		<a href="#two" class="w3-btn w3-blue"> NO </a>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
 	
     	</div>
 </div>
@@ -112,8 +111,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do You Have a Fever?</p>
-		<a href="#three" class="w3-btn w3-blue"> YES </a>
-		<a href="#three" class="w3-btn w3-blue"> NO </a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 </div>	
 
@@ -124,8 +123,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Is Your Throat Sore?</p>
-		<a href="#four" class="w3-btn w3-blue"> YES </a>
-		<a href="#four" class="w3-btn w3-blue"> NO </a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 </div>	
 	
@@ -136,8 +135,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are These Symptoms Seasonal?</p>
-		<a href="#five" class="w3-btn w3-blue"> YES </a>
-		<a href="#five" class="w3-btn w3-blue"> NO </a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 </div>	
 
