@@ -38,6 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	var resultText = document.getElementById("results");
 
 
         function allergyAdd(){
@@ -147,16 +148,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Click to Receive Your Results</p>
-		<button onclick="myFunction()">feeling bold?</button>
-
-		<button onclick="noFunction()">got denied?</button>
 		<script>
-		function allergyAdd() {
-  		alert("send nudes");
-		}
-		function coldAdd() {
-  		alert("so no head?");
-		}
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 		</script>
 	</div>
 </div>	
