@@ -49,13 +49,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		
         }
-	function allgergyCalcu(){
-		allergy_count / (allergy_count + cold_count)
-	}
-	
-	function coldCalcu(){
-		cold_count / (cold_count + allergy_count)
-
+	function resultsPercents(){
+		var resultText = document.getElementById("results");
+		var allergyCalcu = (allergy_count / (allergy_count + cold_count)) * 100
+		var coldCalcu = (cold_count / (allergy_count + cold_count)) * 100
+		resultText.innerHTML = "Probability it is allergies =" + allergyCalcu + "<br> Probability it is a cold =" + coldCalcu;
+	} 
   </script>
 
 
@@ -145,20 +144,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 </div>
-<div class="page" id="five">
+<div class="page" id="four">
 	<div class="w3-container w3-flat-belize-hole">
-		<h1>Your Results</h1>
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is your mucus green/yellow or clear?</p>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-blue"> CLEAR </a>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-blue"> GREENISH/YELLOW </a>
 	</div>
 
-	<div class="page" id="resultsPage">
-		<p id="results">resultFunction</p>
-		<script>
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyCalcu + "<br> Probability it is a cold =" + coldCalcu; 
-		</script>
-		<p> "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
-		
-		
+</div>
+<div class="page" id="results">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Your Results!</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a onclick="resultsPercents();" class="w3-btn w3-blue"> Get Your Results! </a>
 	</div>
 </div>	
 	
