@@ -151,11 +151,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 	<div class="page" id="resultsPage">
-		<p id="resultsOut">
-			<script>
-				resultText.innerHTML = "Probability it is allergies =" + allergyCalcu + "<br> Probability it is a cold =" + coldCalcu;
-			</script>
-		</p>
+		<p id="results">resultFunction</p>
+		<script>
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		</script>
+		<p> "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
 		
 		
 	</div>
